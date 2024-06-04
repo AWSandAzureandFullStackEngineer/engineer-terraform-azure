@@ -6,3 +6,6 @@ output "subnet_id" {
 output "appgw_public_ip_address_id" {
   value = azurerm_public_ip.engineerscentralhub_public_ip.id
 }
+output "public_ip_address_id" {
+  value = azurerm_public_ip.engineerscentralhub_public_ip.id
+}
