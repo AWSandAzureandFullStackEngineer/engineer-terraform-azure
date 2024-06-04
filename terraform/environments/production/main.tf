@@ -3,7 +3,7 @@ locals {
   resource_group_name = var.resource_group_name
 }
 
-module "vnet" {
+module "vnet_module" {
   source              = "../../modules/vnet"
   vnet_name           = var.vnet_name
   vnet_address_space  = var.vnet_address_space
@@ -11,7 +11,7 @@ module "vnet" {
   resource_group_name = var.resource_group_name
 }
 
-module "aks" {
+module "aks_module" {
   source                   = "../../modules/aks"
   resource_group_name      = var.resource_group_name
   location                 = var.location
@@ -24,7 +24,7 @@ module "aks" {
 }
 
 
-module "subnet" {
+module "subnet_module" {
   source                = "../../modules/subnet"
   subnet_name           = var.subnet_name
   location              = local.location
